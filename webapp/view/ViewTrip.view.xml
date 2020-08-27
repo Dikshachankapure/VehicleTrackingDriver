@@ -1,0 +1,109 @@
+<mvc:View xmlns:c="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="project.ZVehicleTrackingDriver.controller.ViewTrip" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true"
+	xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="{i18n>titleViewTrip}" navButtonPress="_onNavBack" showNavButton="true">
+				<content>
+					<tnt:ToolHeader>
+						<Button text="Dashboard" icon="sap-icon://bbyd-dashboard" type="Transparent" press="_onPressMenu">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Trip Manager" icon="sap-icon://task" type="Transparent" press="_onPressMenu">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+					<f:SimpleForm id="SimpleFormDisplay480" minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+						title="Trip Details" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+						<f:content>
+							<c:Title text=""/>
+							<Text id="txtTripId" visible="false"/>
+							<Label text="Vehicle No"/>
+							<Text id="txtVechileRegNo"/>
+							<Label text="Driver Name"/>
+							<Text id="txtDriverName"/>
+							<Label text="Status"/>
+							<MessageStrip id="txtStatus" class="sapUiMediumMarginBottom"></MessageStrip>
+							<Label text="Comments"/>
+							<Text id="txtComments"/>
+							<c:Title text=""/>
+							<Label text="Route"/>
+							<Text id="txtRoute"/>
+							<Label text="Date"/>
+							<Text id="txtDate"/>
+							<Label text="Start Time"/>
+							<Text id="txtStartTime"/>
+							<Label text="End Time"/>
+							<Text id="txtEndTime"/>
+							<Label text="Distance" class="redcolor"/>
+							<Text id="txtDistance" class="redcolor"/>
+							<Label text="Duration" class="redcolor"/>
+							<Text id="txtDuration" class="redcolor"/>
+							<Text id="txtLat" visible="false"/>
+							<Text id="txtLng" visible="false"/>
+						</f:content>
+						<f:layoutData>
+							<FlexItemData shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+						</f:layoutData>
+					</f:SimpleForm>
+					<l:Grid id="timergrid" containerQuery="true" class="sapUiSmallMarginTop timergrid">
+						<l:content>
+							<Label id="lblTime" class="lbltime"/>
+						</l:content>
+					</l:Grid>
+					<HBox id="googleMap" height="80%" width="100%"></HBox>
+					<l:VerticalLayout class="sapUiContentPadding equalColumns" width="100%">
+						<l:content>
+							<FlexBox class="columns">
+								<Table id="tblLocationUpdate" inset="false" visible="true" class="sapUiResponsiveMargin" growing="true" growingScrollToLoad="true"
+									items="{path: '/results'}" width="auto" growingThreshold="10" noDataText="{i18n>nodatafound}">
+									<headerToolbar>
+										<Toolbar>
+											<ToolbarSpacer></ToolbarSpacer>
+<!--											<Button icon="sap-icon://add" type="Emphasized" press="onAdd" visible="true"/>
+-->									</Toolbar>
+									</headerToolbar>
+									<columns>
+										
+										
+										<Column demandPopin="true">
+											<Text text="Time" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="Location"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle" type="Navigation" press="_onEdit">
+											<cells>
+												
+													<Text text="{Time}" id="txtTime"/>
+												<Text text="{Location}" id="txtlocation"/>
+											
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</FlexBox>
+						</l:content>
+					</l:VerticalLayout>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<content>
+							<Button id="btninvisible" visible="false" type="Accept" tooltip="Save"/>
+							<ToolbarSpacer/>
+							<Button id="btnStartTrip" text="Start Trip" visible="true" icon="sap-icon://fob-watch" press="_StartTrip" type="Accept" tooltip="Save"/>
+							<Button id="btnEndTrip" text="End Trip" visible="false" icon="sap-icon://fob-watch" press="_EndTrip" type="Reject" tooltip="Clear"/>
+<!--							<Button id="btnRefresh" text="Refresh" visible="true" icon="sap-icon://refresh" press="onRefresh" type="Accept" tooltip="Save"/>
+-->						</content>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

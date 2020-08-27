@@ -1,0 +1,82 @@
+.sapMGT {
+    background: #EFF4F9;
+}
+
+.sapMNCIconImage {
+    color: #000000;
+}
+
+.sapMGTHdrTxt>.sapMText {
+    font-size: 20px;
+}
+
+.sapMList {
+    margin-top: 10px;
+}
+
+.sapMListHdrText {
+    text-align: center;
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+    .sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapUiResponsiveMargin,
+    .sapUiResponsiveMargin {
+        margin: 0rem;
+    }
+}
+
+.sapMPanelContent {
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 0px;
+}
+
+#__bar0-btnShowHide-BDI-content,
+#__bar0-btnFilters {
+    visibility: hidden;
+}
+
+
+/* Enter your custom styles here */
+
+.sapContrast span.sapMBtnInner.sapMBtnAccept {
+    background-color: green;
+    color: white;
+}
+
+.sapContrast span.sapMBtnInner.sapMBtnReject {
+    background-color: red;
+    color: white;
+}
+
+.sapMLabelDisplayOnly {
+    color: black;
+    font-size: 16px;
+}
+
+.sapUiFormResGrid.sapUiFormBackgrTranslucent>div {
+    background-color: white;
+}
+
+.lbltime {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.timergrid {
+    text-align: center;
+}
+.sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1>.sapUiRespGridSpanM6
+{
+	width:100%;
+}
+.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1>.sapUiRespGridSpanL3
+{
+	width:100%;
+}
+.redcolor{
+	color:red;
+}

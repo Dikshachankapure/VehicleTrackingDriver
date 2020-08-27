@@ -1,0 +1,73 @@
+{
+	"Trips": [{
+		"TripId": "1",
+		"RegistrationNo": "GJ1AH7122",
+		"DriverName": "Patel Vijay",
+		"VehicleRouteFrom": "VSD Technologies Pvt Ltd",
+		"RouteLatFrom": "23.043420",
+		"RouteLngFrom": "72.529232",
+		"VehicleRouteTo": "Adalaj Chokdi",
+		"RouteLatTo": "23.1710",
+		"RouteLngTo": "72.5747",
+		"AssignedDateFrom": "02/04/2020",
+		"AssignedDateTo": "02/04/2020",
+		"AssignedTimeFrom": "10:00 AM",
+		"AssignedTimeTo": "06:57 PM",
+		"Comments": "test Comments",
+		"Status":"UPCOMING",
+		"Type":"Warning"
+
+	}, {
+		"TripId": "2",
+		"RegistrationNo": "GJ3FJ1234",
+		"DriverName": "Rabari Sanjay",
+		"VehicleRouteFrom": "Hotel Sahara Bridge",
+		"RouteLatFrom": "23.593314",
+		"RouteLngFrom": "72.378070",
+		"VehicleRouteTo": "Chandkheda Sub Post Office",
+		"RouteLatTo": "23.107575",
+		"RouteLngTo": "72.584877",
+		"AssignedDateFrom": "04/07/2019",
+		"AssignedDateTo": "04/07/2019",
+		"AssignedTimeFrom": "10:00 AM",
+		"AssignedTimeTo": "11:00 AM",
+		"Comments": "test Comments",
+		"Status":"UPCOMING",
+		"Type":"Warning"
+	},{
+		"TripId": "3",
+		"RegistrationNo": "GJ3FJ2345",
+		"DriverName": "Desai Vijay",
+		"VehicleRouteFrom": "Ahmedabad",
+		"RouteLatFrom": "23.045850",
+		"RouteLngFrom": "72.528879",
+		"VehicleRouteTo": "Mehsana",
+		"RouteLatTo": "23.045850",
+		"RouteLngTo": "72.528879",
+		"AssignedDateFrom": "03/06/2019",
+		"AssignedDateTo": "04/06/2019",
+		"AssignedTimeFrom": "10:00 PM",
+		"AssignedTimeTo": "12:00 PM",
+		"Comments": "test Comments",
+		"Status":"CANCELLED",
+		"Type":"Error"
+	},{
+		"TripId": "4",
+		"RegistrationNo": "GJ01AH123",
+		"DriverName": "Patel Rahul",
+		"VehicleRouteFrom": "Ahmedabad",
+		"RouteLatFrom": "10.2345",
+		"RouteLngFrom": "20.3423",
+		"VehicleRouteTo": "Mehsana",
+		"RouteLatTo": "40.234512",
+		"RouteLngTo": "50.342312",
+		"AssignedDateFrom": "03/06/2019",
+		"AssignedDateTo": "04/06/2019",
+		"AssignedTimeFrom": "10:00 PM",
+		"AssignedTimeTo": "12:00 PM",
+		"Comments": "test Comments",
+		"Status":"COMPLETED",
+		"Type":"Information"
+	}]
+
+}

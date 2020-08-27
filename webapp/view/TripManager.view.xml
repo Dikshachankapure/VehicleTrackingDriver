@@ -1,0 +1,70 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="project.ZVehicleTrackingDriver.controller.TripManager" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true"
+	xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar">
+	<App>
+		<pages>
+			<Page title="{i18n>titleTripManager}" navButtonPress="_onNavBack" showNavButton="true">
+				<content>
+					<tnt:ToolHeader>
+						<Button text="Dashboard" icon="sap-icon://bbyd-dashboard" type="Transparent" press="_onPressMenu">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Trip Manager" icon="sap-icon://task" type="Transparent" press="_onPressMenu">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+					<Table id="tblTrips" inset="false" visible="true" class="sapUiResponsiveMargin" growing="true" growingScrollToLoad="true" width="auto"
+						growingThreshold="10" items="{path:'/Trips'}" noDataText="{i18n>nodatafound}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="List of Trips" level="H2"/>
+								<ToolbarSpacer/>
+								<SearchField liveChange="onSearch" width="50%"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column demandPopin="true">
+								<Text text="Trip Id"/>
+							</Column>
+							<Column demandPopin="true">
+								<Text text="Vehicle No"/>
+							</Column>
+							<Column demandPopin="true">
+								<Text text="Driver Name"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
+								<Text text="Assigned Route"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
+								<Text text="Assigned Date"/>
+							</Column>
+							<Column demandPopin="true" hAlign="End" minScreenWidth="Tablet">
+								<Text text="Assigned Time"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" vAlign="Middle" minScreenWidth="Tablet">
+								<Text text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle" type="Navigation" press="_onViewInfo">
+								<cells>
+									<Text text="{TripId}"/>
+									<Text text="{RegistrationNo}"/>
+									<Text text="{DriverName}"/>
+									<Text text="From: {VehicleRouteFrom} To: {VehicleRouteTo}"/>
+									<Text text="From: {AssignedDateFrom}"/>
+									<Text text="From: {AssignedTimeFrom} To: {AssignedTimeTo}"/>
+									<MessageStrip type="{Type}" text="{Status}" class="sapUiMediumMarginBottom"></MessageStrip>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

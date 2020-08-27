@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "project.ZVehicleTrackingDriver.ZVehicleTrackingDriver",
+        "description": "Trip Manager",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#ZVehicleTrackingDriver-Display",
+        "navigationComponentName": "project.ZVehicleTrackingDriver",
+        "intentSemanticObject": "ZVehicleTrackingDriver",
+        "intentAction": "Display",
+        "html5ApplicationName": "zvehicletrackingdriver",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "46fe9fa0-afdb-4221-8712-fec85d1e8400-1555043785238"
+        ],
+        "contentPackages": [
+            "37e7742e-74da-42e1-878f-a6514a2ab3c4-1555043729371"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Trip ",
+        "subtitle": "Employee",
+        "searchKeywords": "Trip ,Employee",
+        "displayIconUrl": "sap-icon://car-rental",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
